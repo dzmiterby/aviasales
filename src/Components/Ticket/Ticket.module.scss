@@ -1,0 +1,72 @@
+@import '../App/App.module.scss';
+
+.ticket__container {
+    background-color: $colorWhite;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+.ticket__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header__cost {
+    font-weight: calc($fontWeight * (600 / 400));
+    font-size: calc($fontsize * 2);
+    color: #2196F3;
+}
+
+.header__emblem img {
+    width: 100%;
+}
+
+.flight__elem {
+    display: flex;
+    margin-top: 20px;
+}
+
+@media (max-width: 399px) {
+    .flight__elem {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.flight__timepoint,
+.flight__duration,
+.flight__transfer {
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+@media (max-width: 399px) {
+    .flight__timepoint,
+    .flight__duration,
+    .flight__transfer {
+        width: 70%;
+    }
+}
+
+.flight__timepoint :first-child,
+.flight__duration :first-child,
+.flight__transfer :first-child {
+    font-weight: calc($fontWeight * (600 / 400));
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #A0B0B9;
+}
+
+.flight__timepoint :last-child,
+.flight__duration :last-child,
+.flight__transfer :last-child {
+    font-weight: calc($fontWeight * (600 / 400));
+    font-size: calc($fontsize * (14 / 12));
+    color: $colorText;
+}

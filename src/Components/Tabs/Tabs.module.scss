@@ -1,0 +1,54 @@
+@import '../App/App.module.scss';
+
+.nav__container {
+    width: 100%;
+    border: 1px solid #DFE5EC;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+@media (max-width: 399px) {
+    .nav__container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.nav__but {
+    width: 33.333%;
+    height: 50px;
+    font-weight: calc($fontWeight * (600 / 400));
+    letter-spacing: 0.5;
+    text-transform: uppercase;
+    background-color: $colorWhite;
+    border: none;
+    cursor: url('./cursor.svg'), auto;
+}
+
+@media (max-width: 399px) {
+    .nav__but {
+        width: 100%;
+        border: 1px solid #DFE5EC;
+    }
+}
+
+.nav__but-active {
+    width: 33.333%;
+    height: 50px;
+    font-weight: calc($fontWeight * (600 / 400));
+    letter-spacing: 0.5;
+    text-transform: uppercase;
+    color: $colorWhite;
+    background-color: #2196F3;
+    border: none;
+    transition-duration: 0.5s;
+    transition-property: background-color;
+    cursor: url('./cursor.svg'), auto;
+}
+
+@media (max-width: 399px) {
+    .nav__but-active {
+        width: 100%;
+    }
+}

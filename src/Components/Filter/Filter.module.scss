@@ -1,0 +1,40 @@
+@import '../App/App.module.scss';
+
+.panel__container {
+    max-width: 235px;
+    background-color: $colorWhite;
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.panel__container p {
+    font-weight: calc($fontWeight * (600 / 400));
+    letter-spacing: 0.5;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.panel__checkboxs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.panel__check {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px;
+    cursor: url('./cursor.svg'), auto;
+}
+
+.panel__check:hover {
+    background-color: #F1FCFF;
+    transition-duration: 0.6s;
+    transition-property: background-color;
+}
+
+.panel__check input:hover {
+    cursor: url('./cursor.svg'), auto;
+}
