@@ -11,9 +11,9 @@ function Tabs() {
   function changeTab(event) {
     let buttons = document.querySelectorAll('[data-b="tabs"]');
     for (let elem of buttons) {
-      elem.setAttribute('class', 'Tabs_nav__but');
+      elem.setAttribute('class', `${classes['nav__but']}`);
     }
-    event.target.setAttribute('class', 'Tabs_nav__but-active');
+    event.target.setAttribute('class', `${classes['nav__but-active']}`);
     dispatch(switchByTabs(event.target.dataset.t));
   }
   return (
